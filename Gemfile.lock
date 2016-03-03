@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    slugify (1.0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  slugify
+
+BUNDLED WITH
+   1.11.2
