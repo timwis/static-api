@@ -1,0 +1,6 @@
+ignore:
+  - _prose.yml
+  - .gitignore
+  - .travis.yml
+  - deploy.sh
+  - static-api.rb
