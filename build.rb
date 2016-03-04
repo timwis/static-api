@@ -1,9 +1,11 @@
+require 'fileutils'
 require 'csv'
 require 'json'
 require 'slugify'
 
-BUILD_DIR = 'build'
-Dir.mkdir(BUILD_DIR) unless Dir.exist?(BUILD_DIR)
+BUILD_DIR = 'dist'
+FileUtils.rm_rf(BUILD_DIR) if Dir.exist?(BUILD_DIR)
+Dir.mkdir(BUILD_DIR)
 
 primary_key = ENV['PRIMARY_KEY'] || 'id'
 
