@@ -31,5 +31,5 @@ becomes
 
 # Usage
 ```bash
-PRIMARY_KEY=<key> ruby build.rb
+PRIMARY_KEY=<key> ruby static-api.rb
 ```
