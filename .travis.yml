@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.1
+
+script: ruby static-api.rb
+
+before_deploy:
+  - chmod +x deploy.sh
+
+deploy:
+  provider: script
+  script: ./deploy.sh
+  skip_cleanup: true
