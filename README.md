@@ -29,8 +29,8 @@ becomes
 The example file in this repository, [sample_data.csv](sample_data.csv), is automatically
 published to the [gh-pages branch](https://github.com/timwis/static-api/tree/gh-pages)
 by [Travis CI](https://travis-ci.org/timwis/static-api) and can thus be viewed at
-[timwis.github.io/static-api/sample_data.json](http://timwis.github.io/static-api/sample_data.json)
-(pardon the redirect to `timwis.com`, it's because of my [personal repo](https://github.com/timwis/timwis.github.io/blob/master/CNAME)).
+[timwis.github.io/static-api/sample-data.json](http://timwis.github.io/static-api/sample-data.json),
+[/sample-data/23.json](http://timwis.github.io/static-api/sample-data/23.json), etc..
 
 # Manual Usage
 1. Clone this repository
