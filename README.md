@@ -1,5 +1,6 @@
 # Static API
-Creates a static API from a CSV file (Work in progress)
+Creates a static API from a CSV file (Work in progress).
+Inspired by @waldoj's [instant-api](https://github.com/waldoj/instant-api).
 
 Animals.csv
 ```csv
