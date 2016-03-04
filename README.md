@@ -54,3 +54,5 @@ traiditional git and push your changes to the `master` branch (default).
 
 Travis CI will be triggered by a push to the `master` branch, build your Static API, and push it
 to the `gh-pages` branch, allowing you to view it at `username.github.io/repo-name/file_name.json`
+
+**Hey,** do you have thoughts on a better way to use this? [Join the conversation!](https://github.com/timwis/static-api/issues/8) 
