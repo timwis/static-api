@@ -2,6 +2,8 @@ language: ruby
 rvm:
   - 2.1
 
+install: gem install slugify
+
 script: ruby static-api.rb
 
 before_deploy:
