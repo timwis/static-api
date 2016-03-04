@@ -11,8 +11,10 @@ primary_key = ENV["PRIMARY_KEY"] || "id"
 
 csv_files = Dir["./*.csv"].reject { |f| File.directory?(f) }
 
+# Loop through each CSV file in the directory
 csv_files.each do |file_name|
   dataset_slug = File.basename(file_name, ".csv").slugify
+  puts "Processing #{dataset_slug}"
   Dir.mkdir("#{BUILD_DIR}/#{dataset_slug}") unless Dir.exist?("#{BUILD_DIR}/#{dataset_slug}")
 
   rows = Array.new
@@ -26,8 +28,12 @@ csv_files.each do |file_name|
   }) do |row|
     rows.push(row.to_hash)
     target_file = row[primary_key.to_sym].to_s.slugify
-    row_json = JSON.generate(row.to_hash)
-    File.open("#{BUILD_DIR}/#{dataset_slug}/#{target_file}.json", "w") { |f| f.write(row_json) }
+    if target_file == ""
+      puts "Warning: No primary key on line #{$.}"
+    else
+      row_json = JSON.generate(row.to_hash)
+      File.open("#{BUILD_DIR}/#{dataset_slug}/#{target_file}.json", "w") { |f| f.write(row_json) }
+    end
   end
 
   # Write full dataset to file
