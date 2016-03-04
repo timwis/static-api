@@ -2,12 +2,15 @@ require 'csv'
 require 'json'
 require 'slugify'
 
+BUILD_DIR = 'build'
+Dir.mkdir(BUILD_DIR) unless Dir.exist?(BUILD_DIR)
+
 primary_key = ENV['PRIMARY_KEY'] || 'id'
 
 csv_files = Dir['./*.csv'].reject { |f| File.directory?(f) }
 
 csv_files.each do |file_name|
-  target_dir = File.basename(file_name, '.csv').slugify
+  target_dir = BUILD_DIR + '/' + File.basename(file_name, '.csv').slugify
   Dir.mkdir(target_dir) unless Dir.exist?(target_dir)
 
   CSV.foreach(file_name, {
