@@ -1,5 +1,5 @@
-# Static API
-Creates a static API from a CSV file and publishes it to a static web server.
+# Static API [![Build Status](https://travis-ci.org/timwis/static-api.svg?branch=master)](https://travis-ci.org/timwis/static-api)
+Creates a static API from a CSV file and publishes it to a static web server using Travis CI.
 Inspired by @waldoj's [instant-api](https://github.com/waldoj/instant-api).
 
 Animals.csv
